@@ -27,7 +27,8 @@ class Database {
 
     public function query($sql)
     {
-        $result = mysqli_query($this->connection,$sql);
+//        $result = mysqli_query($this->connection,$sql);
+        $result = $this->connection->query($sql);
         $this->confirm_query($result);
         return $result;
     }
@@ -35,17 +36,24 @@ class Database {
 
     private function confirm_query ($result)
     {
+
         if (!$result)
         {
-            die('query failed');
+            die('query failed' . $this->connection->error);
         }
     }
 
 
     public function escape_string($stirng)
     {
-        $escaped_string = mysqli_real_escape_string($this->connection,$stirng);
+//        $escaped_string = mysqli_real_escape_string($this->connection,$stirng);
+        $escaped_string = $this->connection->real_escape_string($stirng);
         return $escaped_string;
+    }
+
+    public function the_insert_id()
+    {
+        return $this->connection->insert_id;
     }
 
 

@@ -9,10 +9,10 @@
 
                 <?php
 
-                    $sql = "SELECT * FROM users WHERE id = 1";
-                    $result = $database->query($sql);
+                    $user = new User();
+                    $result = $user->find_all_users();
                     while ($row = mysqli_fetch_array($result)){
-                        echo $row['username'];
+                        echo  $row['username'];
                     }
 
                 ?>
