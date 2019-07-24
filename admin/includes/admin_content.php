@@ -9,16 +9,24 @@
 
                 <?php
 
+//                   $user = new User();
+//                   $user->username = "nai";
+//                   $user->password = "123456";
+//                   $user->first_name = "nai";
+//                   $user->last_name = "nai";
+//                   $user->create();
 
-//                    $users = User::find_all_users();
-//                    foreach ($users as $user){
-//                        echo $user->username;
-//                    }
 
-                  $found_user = User::find_user_by_id(1);
+//                    $user = User::find_user_by_id(2);
+//                    $user->username = "sei";
+//                    $user->password = "789456";
+//                    $user->first_name = "sei";
+//                    $user->last_name = "sei";
+//                    $user->update();
 
-                  echo $found_user->username;
 
+                $user = User::find_user_by_id(5);
+                $user->delete();
 
 
                 ?>
