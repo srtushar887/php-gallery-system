@@ -14,19 +14,17 @@
 //                   $user->password = "123456";
 //                   $user->first_name = "nai";
 //                   $user->last_name = "nai";
-//                   $user->create();
+//                   $user->save();
 
 
-//                    $user = User::find_user_by_id(2);
-//                    $user->username = "sei";
-//                    $user->password = "789456";
-//                    $user->first_name = "sei";
-//                    $user->last_name = "sei";
-//                    $user->update();
+                    $user = User::find_user_by_id(13);
+                    $user->last_name = "sssss";
+                    $user->save();
 
 
-                $user = User::find_user_by_id(5);
-                $user->delete();
+//                $user = User::find_user_by_id(6);
+//                $user->username = "sdsadasd";
+//                $user->save();
 
 
                 ?>
