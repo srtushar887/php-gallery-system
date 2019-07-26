@@ -17,14 +17,27 @@
 //                   $user->save();
 
 
-                    $user = User::find_user_by_id(13);
-                    $user->last_name = "sssss";
-                    $user->save();
+//                    $user = User::find_user_by_id(13);
+//                    $user->last_name = "sssss";
+//                    $user->save();
 
 
 //                $user = User::find_user_by_id(6);
 //                $user->username = "sdsadasd";
 //                $user->save();
+
+//                $user = new User();
+//                $user->username = "asdasdasdasd";
+//                $user->save();
+//                $user = User::find_all();
+//                foreach ($user as $us){
+//                    echo $us->username."<br>";
+//                }
+
+                                $photos = Photo::find_all();
+                                foreach ($photos as $us){
+                                    echo $us->title."<br>";
+                                }
 
 
                 ?>
